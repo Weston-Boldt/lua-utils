@@ -1,4 +1,16 @@
 --[[
+    see if the two tables reference the same spot in memory or not
+    useful for when you are dealing with potentially many references to tables
+
+    @var a tbl
+    @var b tbl
+    @return bool
+--]]
+function tblAddressEq(a, b)
+    return tostring(a) == tostring(b)
+end
+
+--[[
     if the needle is of type table
     then it will compare the reference
     so if you are looking for a 'empty' table
